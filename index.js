@@ -155,10 +155,19 @@ app.post('/new', async (req,res)=>{
     let total = req.body?.totals || {};
     let Css = `
          <style>
+        @font-face {
+            font-family: "Kalpurush ANSI";
+            src: url("https://db.onlinewebfonts.com/t/66e0c56c3e3f784ded03e9ab1ddd2616.eot");
+            src: url("https://db.onlinewebfonts.com/t/66e0c56c3e3f784ded03e9ab1ddd2616.eot?#iefix") format("embedded-opentype"),
+                 url("https://db.onlinewebfonts.com/t/66e0c56c3e3f784ded03e9ab1ddd2616.woff2") format("woff2"),
+                 url("https://db.onlinewebfonts.com/t/66e0c56c3e3f784ded03e9ab1ddd2616.woff") format("woff"),
+                 url("https://db.onlinewebfonts.com/t/66e0c56c3e3f784ded03e9ab1ddd2616.ttf") format("truetype"),
+                 url("https://db.onlinewebfonts.com/t/66e0c56c3e3f784ded03e9ab1ddd2616.svg#Kalpurush ANSI") format("svg");
+        }
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: "Kalpurush ANSI", Arial, sans-serif;
             background: #eee;
         }
         .body-content {
@@ -168,7 +177,7 @@ app.post('/new', async (req,res)=>{
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
+            font-family: "Kalpurush ANSI", Arial, sans-serif;
         }
         .page {
             background: white;
