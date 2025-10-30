@@ -154,15 +154,35 @@ app.post('/new', async (req,res)=>{
     }
     let total = req.body?.totals || {};
     let Css = `
-        * {
+             <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Sans Bengali", Arial, sans-serif;
+            background: #eee;
+            font-style: normal !important;
+        }
+        .body-content {
+            background: #eee;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Noto Sans Bengali", Arial, sans-serif;
+        }
+            * {
             font-style: normal !important;
             font-weight: 400 !important;
         }
+        
         .page {
             background: white;
             width: 210mm;
             height: 297mm;
-            padding: 5mm 5mm;
+            padding: 10mm;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
         }
@@ -171,7 +191,7 @@ app.post('/new', async (req,res)=>{
         }
 
         p {
-            line-height: 1.6;
+            line-height: 1.2;
         }
         @media print {
             body {
@@ -185,7 +205,7 @@ app.post('/new', async (req,res)=>{
         }
         @page {
             size: A4;
-            margin: 0mm 5mm;
+            margin: 10mm;
         }
         .report-table {
             width: 100%;
@@ -197,6 +217,7 @@ app.post('/new', async (req,res)=>{
             padding: 4px 1px;
             text-align: left;
             font-size: 10px; /*Adjust font size to fit */
+            line-height: 1.2;
         }
         .report-table td {
             border: 1px solid #000;
@@ -267,6 +288,7 @@ app.post('/new', async (req,res)=>{
             padding: 2px;
             text-align: left;
             font-size: 12px;
+            line-height: 1.2;
         }
         .tc {
             text-align: center;
@@ -311,7 +333,7 @@ app.post('/new', async (req,res)=>{
         .signature-box {
             text-align: left;
             width: 500px;
-            height: 180px;
+            height: 150px;
             border: 1px solid #000;
             border-radius: 2px;
             padding-top: 5px;
@@ -624,10 +646,10 @@ app.post('/new', async (req,res)=>{
         format: 'A4',
         printBackground: true,
         margin: {
-            top: '20mm',
-            right: '20mm',
-            bottom: '20mm',
-            left: '20mm'
+            top: '10mm',
+            right: '10mm',
+            bottom: '10mm',
+            left: '10mm'
         }
     };
 
