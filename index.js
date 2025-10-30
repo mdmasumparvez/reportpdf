@@ -154,22 +154,9 @@ app.post('/new', async (req,res)=>{
     }
     let total = req.body?.totals || {};
     let Css = `
-         <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Noto Sans Bengali", Arial, sans-serif;
-            background: #eee;
-        }
-        .body-content {
-            background: #eee;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: "Noto Sans Bengali", Arial, sans-serif;
+        * {
+            font-style: normal !important;
+            font-weight: 400 !important;
         }
         .page {
             background: white;
